@@ -173,6 +173,7 @@ def main():
             back()
        
         elif choice == "6":
+            print("Goodbye!")
             break
         
         else:
@@ -180,6 +181,7 @@ def main():
             print("Please select one of the numbers.")
             print("---------------------")
             back()
+
 
 
 main()
