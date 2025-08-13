@@ -134,7 +134,12 @@ def main():
            
             # Checking if both are valid inputs
 
-            if checkName(name) and checkNumber(number):
+            if name in dic:
+                print("\n-------------------------------")
+                print(f"{name} is already in the contacts.")
+                print("-------------------------------")
+                back()
+            elif checkName(name) and checkNumber(number):
                 addContact(name, number)
                 back()
             elif checkName(name) == False and checkNumber(number) == True:
@@ -181,7 +186,5 @@ def main():
             print("Please select one of the numbers.")
             print("---------------------")
             back()
-
-
 
 main()
