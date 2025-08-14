@@ -45,7 +45,10 @@ def digit(text):
 # 6. Replace a specific word
 
 def replace(base, old, new):
-    return base.replace(old, new)
+    if old in base:
+        print(base.replace(old, new))
+    else:
+        print("An error has been occurred.")
 
 # 7. Count words
 
@@ -103,7 +106,7 @@ def main():
             old = input("\nWhat would you want to replace? ")
             new = input("\nFor what? ")
             print("\n-------------------")
-            print(replace(base, old, new))
+            replace(base, old, new)
             print("-------------------")
             back()
         elif choice == "7":
