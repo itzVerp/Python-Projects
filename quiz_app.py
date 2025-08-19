@@ -12,6 +12,29 @@
 
 import random
 
+# Score
+score = 0
+
+# Check the answers
+
+def one(answer):
+    if answer == "1":
+        return True
+    else:
+        return False
+
+def two(answer):
+    if answer == "2":
+        return True
+    else:
+        return False
+    
+def three(answer):
+    if answer == "3":
+        return True
+    else:
+        return False
+    
 # Questions
 
 def quest_animal(answer = ""):
@@ -19,150 +42,105 @@ def quest_animal(answer = ""):
     print("1- Peregrine falcon") #
     print("2- Cheetah")
     print("3- Sailfish")
-    if answer == "1":
-        return True
-    else:
-        return False
+    return one(answer)
     
 def quest_language(answer = ""):
     print("\nWhat's the most spoken language in the world?")
     print("1- Spanish")
     print("2- English")
     print("3- Mandarin Chinese") #
-    if answer == "3":
-        return True
-    else:
-        return False
+    return three(answer)
     
 def quest_planet(answer = ""):
     print("\nWhich planet is known as the Red Planet?")
     print("1- Venus")
     print("2- Mars") #
     print("3- Jupiter")
-    if answer == "2":
-        return True
-    else:
-        return False
+    return two(answer)
     
 def quest_ocean(answer = ""):
     print("\nWhat's the largest ocean on Earth?")
     print("1- Atlantic Ocean")
     print("2- Pacific Ocean") #
     print("3- Indian Ocean")
-    if answer == "2":
-        return True
-    else:
-        return False
+    return two(answer)
     
 def quest_olympics(answer = ""):
     print("\nIn which country did the Olympic Games originate?")
     print("1- Greece") #
     print("2- Italy")
     print("3- Egypt")
-    if answer == "1":
-        return True
-    else:
-        return False
+    return one(answer)
     
 def quest_desert(answer = ""):
     print("\nWhich is the largest desert in the world?")
     print("1- Sahara")
     print("2- Antarctic Desert") #
     print("3- Arabian Desert")
-    if answer == "2":
-        return True
-    else:
-        return False
+    return two(answer)
     
 def quest_river(answer = ""):
     print("\nWhat's the longest river in the world?")
     print("1- Nile") #
     print("2- Amazon")
     print("3- Yangtze")
-    if answer == "1":
-        return True
-    else:
-        return False
+    return one(answer)
     
 def quest_monalisa(answer = ""):
     print("\nWho painted the Mona Lisa?")
     print("1- Vincent van Gogh")
     print("2- Leonardo da Vinci") #
     print("3- Pablo Picasso")
-    if answer == "2":
-        return True
-    else:
-        return False
+    return three(answer)
     
 def quest_worldwar(answer = ""):
     print("\nIn which year did World War II end?")
     print("1- 1950")
     print("2- 1939")
     print("3- 1945") #
-    if answer == "3":
-        return True
-    else:
-        return False
+    return three(answer)
     
 def quest_symbol(answer = ""):
     print("\nWhat's the chemical symbol for gold?")
     print("1- Au") #
     print("2- Ag")
     print("3- Go")
-    if answer == "1":
-        return True
-    else:
-        return False
+    return one(answer)
     
 def quest_genetic(answer = ""):
     print("\nWhich part of the cell contains genetic material?")
     print("1- Nucleus") #
     print("2- Cytoplasm")
     print("3- Mitochondria")
-    if answer == "1":
-        return True
-    else:
-        return False
+    return one(answer)
     
 def quest_pop(answer = ""):
     print('\nWho is known as the "King of Pop"?')
     print("1- Elvis Presley")
     print("2- Michael Jackson") #
     print("3- Prince")
-    if answer == "2":
-        return True
-    else:
-        return False
+    return two(answer)
     
 def quest_quote(answer = ""):
     print('\nWhich movie features the quote “I’ll be back”?')
     print("1- Predator")
     print("2- Rambo")
     print("3- The Terminator") #
-    if answer == "3":
-        return True
-    else:
-        return False
+    return three(answer)
     
 def quest_rainbow(answer = ""):
     print("\nHow many colors are in the rainbow?")
     print("1- 6")
     print("2- 7") #
     print("3- 8")
-    if answer == "2":
-        return True
-    else:
-        return False
+    return two(answer)
     
 def quest_flower(answer = ""):
     print("\nWhat’s the national flower of Japan?")
     print("1- Rose")
     print("2- Cherry Blossom") #
     print("3- Lotus")
-    if answer == "2":
-        return True
-    else:
-        return False
+    return two(answer)
     
 # List of the questions
     
@@ -193,6 +171,7 @@ while True:
         print("Right Answer!")
         print("---------------")
         input("")
+        score += 1
     else:
         print("\n---------------")
         print("Sorry, wrong answer!")
@@ -202,5 +181,8 @@ while True:
     if questions:
         continue
     else:
-        print("Test")
+        print("\n------------------------------------")
+        print("| Congrats! You finished the quiz! |")
+        print(f"| Your score is: {score}                 |")
+        print("------------------------------------")
         break
