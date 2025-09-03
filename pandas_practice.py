@@ -16,3 +16,32 @@
 
 # combine it with the employees dataset so that each employee also has a location.
 
+import pandas as pd
+
+df = pd.read_csv("employees.csv")
+
+def print_first_five_rows():
+    print(df)
+    
+def load_csv():
+    df.to_csv("employees_copy.csv")
+    
+def name_column():
+    print(df["Name"])
+    
+def rows_first_three_employees():
+    print(df.head(3))
+    
+def all_employees_finance():
+    print(print(df[df["Department"] == "Finance"]))
+    
+#def new_column():
+    
+#def average_department_salary():
+    
+#def employees_sorted_age():
+    
+#def missing_values():
+    
+#def combine():
+all_employees_finance()
